@@ -24,6 +24,8 @@ SchoolLife의 아이폰/아이패드 간 시간표 수정, 코멘트, 알림 시
 
 ## API
 
+- `GET /api/bootstrap/current`
+- `POST /api/bootstrap/create-or-get`
 - `POST /api/sync/create`
 - `POST /api/sync/pull`
 - `POST /api/sync/push`
@@ -32,5 +34,6 @@ SchoolLife의 아이폰/아이패드 간 시간표 수정, 코멘트, 알림 시
 ## 저장 방식
 
 - 각 동기화 공간은 Blob에 JSON 문서 1개로 저장됩니다.
+- 현재 공용 동기화 키는 별도 bootstrap 문서에 저장됩니다.
 - 서버는 사용자 계정 시스템 없이 `동기화 키`로만 인증합니다.
 - 충돌 시에는 최신 수정 시각을 우선합니다.
